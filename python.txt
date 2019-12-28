@@ -1,0 +1,81 @@
+#problem #1
+def F2C(F):
+    C = (F-32)*5/9
+    return C
+degree=int(input("放(F)"))
+C=F2C(degree)
+print(C)
+
+#problem #2
+def ComputeBMI(H,W):
+    H=H/100
+    BMI=W/(H**2)
+    return BMI
+h=int(input("ō蔼(CM)"))
+w=int(input("砰(KG)"))
+BMI=ComputeBMI(h,w)
+print(BMI)
+
+#problem #3
+def Summation(n):
+    sum=0
+    for i in range(1,n+1,2):
+        sum=sum+i
+    return sum
+k=int(input("タ计"))
+sum=Summation(k)
+print(sum)
+
+#problem #4
+numList=[35,71,15,25,48,50,3,99,84,21,69,13,7]
+def average(n):
+    sum=0
+    for i in range(len(n)):
+        sum+=n[i]
+        e=sum/len(n)
+    return e
+def middle(a):
+    a=sorted(a)
+    b=len(a)
+    if b%2==0:
+        middle=(a[b//2]+a[b//2-1])/2
+        a[0]=middle
+    if b%2==1 :
+        middle=a[(b-1)//2]
+        a[0]=middle
+    return a[0]
+c=middle(numList)
+
+p=sorted(numList,reverse=True)
+print("程:",max(numList))
+print("程:",min(numList))
+print("キА:",average(numList))
+print("い:",c)
+print("パ:",p)
+
+#problem #5
+Fruit = {'Apple' : 30,'Banana' : 25,'Orange' : 20,'PineApple' : 40,'Pear' : 50}
+a=int(input("apple禦碭ょ?"))
+b=int(input("banana禦碭ょ?"))
+o=int(input("orange禦碭ょ?"))
+pa=int(input("pineaplle禦碭ょ?"))
+p=int(input("pear禦碭ょ?"))
+apple=Fruit.get('Apple')
+banana=Fruit.get('Banana')
+orange=Fruit.get('Orange')
+pineapple=Fruit.get('PineApple')
+pear=Fruit.get('Pear')
+sum1=a*apple
+sum2=b*banana
+sum3=o*orange
+sum4=pa*pineapple
+sum5=p*pear
+print(sum1+sum2+sum3+sum4+sum5)
+
+
+apple禦碭ょ?5
+banana禦碭ょ?5
+orange禦碭ょ?5
+pineaplle禦碭ょ?5
+pear禦碭ょ?5
+825
